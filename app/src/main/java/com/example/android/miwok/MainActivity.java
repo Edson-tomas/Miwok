@@ -18,6 +18,7 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onNumbersClickListener(View view){
+    public void onNumbersClickListener(View view) {
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,11 +52,35 @@ public class MainActivity extends AppCompatActivity {
                 Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
                 startActivity(numbersIntent);
 
+                String[] words = new String[10];
+                words[0] = "one";
+                words[1] = "two";
+                words[2] = "three";
+                words[3] = "four";
+                words[4] = "five";
+                words[5] = "six";
+                words[6] = "seven";
+                words[7] = "eight";
+                words[8] = "nine";
+                words[9] = "ten";
+
+                Log.v("NumberActivity", "Word at index 0: " + words[0]);
+                Log.v("NumberActivity", "Word at index 1: " + words[1]);
+                Log.v("NumberActivity", "Word at index 2: " + words[2]);
+                Log.v("NumberActivity", "Word at index 3: " + words[3]);
+                Log.v("NumberActivity", "Word at index 4: " + words[4]);
+                Log.v("NumberActivity", "Word at index 5: " + words[5]);
+                Log.v("NumberActivity", "Word at index 6: " + words[6]);
+                Log.v("NumberActivity", "Word at index 7: " + words[7]);
+                Log.v("NumberActivity", "Word at index 8: " + words[8]);
+                Log.v("NumberActivity", "Word at index 9: " + words[9]);
+
+
             }
         });
     }
 
-    public void onFamilyMembersClickListener(View view){
+    public void onFamilyMembersClickListener(View view) {
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void onColorsClickListener(View view){
+    public void onColorsClickListener(View view) {
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void onPhrasesClickListener(View view){
+    public void onPhrasesClickListener(View view) {
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
