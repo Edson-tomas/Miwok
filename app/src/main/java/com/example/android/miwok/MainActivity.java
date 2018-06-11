@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,8 +30,71 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+        TextView familyMembers = (TextView) findViewById(R.id.family);
+        TextView colors = (TextView) findViewById(R.id.colors);
+        TextView phrases = (TextView) findViewById(R.id.phrases);
+
+        onNumbersClickListener(numbers);
+        onFamilyMembersClickListener(familyMembers);
+        onColorsClickListener(colors);
+        onPhrasesClickListener(phrases);
+
     }
 
+    public void onNumbersClickListener(View view){
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numbersIntent);
+
+            }
+        });
+    }
+
+    public void onFamilyMembersClickListener(View view){
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent numbersIntent = new Intent(MainActivity.this, FamilyMembersActivity.class);
+                startActivity(numbersIntent);
+
+            }
+        });
+    }
+
+    public void onColorsClickListener(View view){
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent numbersIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(numbersIntent);
+
+            }
+        });
+    }
+
+    public void onPhrasesClickListener(View view){
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent numbersIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(numbersIntent);
+
+            }
+        });
+    }
+
+    /*
     public void onNumbersClick(View view) {
 
         Intent numbersIntent = new Intent(this, NumbersActivity.class);
@@ -54,4 +118,5 @@ public class MainActivity extends AppCompatActivity {
         Intent numbersIntent = new Intent(this, PhrasesActivity.class);
         startActivity(numbersIntent);
     }
+    */
 }
